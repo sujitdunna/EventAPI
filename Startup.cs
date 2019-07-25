@@ -83,7 +83,9 @@ namespace EventAPI
             services.AddMvc(c => {
                 c.Filters.Add(typeof(CustomExceptionHandler));
                 c.OutputFormatters.Add(new CSVCustomFormatter());
-            }).AddXmlSerializerFormatters().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
+            })
+            //.AddXmlSerializerFormatters()
+            .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
