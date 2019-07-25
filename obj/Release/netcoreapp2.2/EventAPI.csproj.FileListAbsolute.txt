@@ -1,0 +1,14 @@
+D:\Sujit\HTML\MicroServices\EventAPI\EventAPI\bin\Release\netcoreapp2.2\EventAPI.deps.json
+D:\Sujit\HTML\MicroServices\EventAPI\EventAPI\bin\Release\netcoreapp2.2\EventAPI.runtimeconfig.json
+D:\Sujit\HTML\MicroServices\EventAPI\EventAPI\bin\Release\netcoreapp2.2\EventAPI.runtimeconfig.dev.json
+D:\Sujit\HTML\MicroServices\EventAPI\EventAPI\bin\Release\netcoreapp2.2\EventAPI.dll
+D:\Sujit\HTML\MicroServices\EventAPI\EventAPI\bin\Release\netcoreapp2.2\EventAPI.pdb
+D:\Sujit\HTML\MicroServices\EventAPI\EventAPI\obj\Release\netcoreapp2.2\EventAPI.csprojAssemblyReference.cache
+D:\Sujit\HTML\MicroServices\EventAPI\EventAPI\obj\Release\netcoreapp2.2\EventAPI.csproj.CoreCompileInputs.cache
+D:\Sujit\HTML\MicroServices\EventAPI\EventAPI\obj\Release\netcoreapp2.2\EventAPI.RazorAssemblyInfo.cache
+D:\Sujit\HTML\MicroServices\EventAPI\EventAPI\obj\Release\netcoreapp2.2\EventAPI.RazorAssemblyInfo.cs
+D:\Sujit\HTML\MicroServices\EventAPI\EventAPI\obj\Release\netcoreapp2.2\EventAPI.AssemblyInfoInputs.cache
+D:\Sujit\HTML\MicroServices\EventAPI\EventAPI\obj\Release\netcoreapp2.2\EventAPI.AssemblyInfo.cs
+D:\Sujit\HTML\MicroServices\EventAPI\EventAPI\obj\Release\netcoreapp2.2\EventAPI.RazorTargetAssemblyInfo.cache
+D:\Sujit\HTML\MicroServices\EventAPI\EventAPI\obj\Release\netcoreapp2.2\EventAPI.dll
+D:\Sujit\HTML\MicroServices\EventAPI\EventAPI\obj\Release\netcoreapp2.2\EventAPI.pdb

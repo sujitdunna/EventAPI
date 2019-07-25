@@ -34,8 +34,8 @@ namespace EventAPI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<EventDbContext>(options => {
-                //options.UseInMemoryDatabase(databaseName: "EventDb");
-                options.UseSqlServer(Configuration.GetConnectionString("EventSqlConnection"));
+                options.UseInMemoryDatabase(databaseName: "EventDb");
+                //options.UseSqlServer(Configuration.GetConnectionString("EventSqlConnection"));
             });
 
             services.AddSwaggerGen(c => {
@@ -97,6 +97,7 @@ namespace EventAPI
                 });
             }
 
+            InitializeDatabase(app);
             app.UseCors(); //use this if the cors configuration is done in ConfigureServices method.
             //app.UseCors(c=> {
             //    c.WithOrigins("*.microsoft.com")
@@ -109,6 +110,49 @@ namespace EventAPI
             app.UseSwagger(); // add swagger as a middleware
             app.UseAuthentication();
             app.UseMvc();
+        }
+
+        private void InitializeDatabase(IApplicationBuilder app)
+        {
+            using (var serviceScope = app.ApplicationServices.GetRequiredService<IServiceScopeFactory>().CreateScope())
+            {
+                var db = serviceScope.ServiceProvider.GetService<EventDbContext>();
+
+                db.Events.Add(new Models.EventInfo
+                {
+                    Title = "Sample Event 1",
+                    StartDate = DateTime.Now,
+                    EndDate = DateTime.Now.AddDays(2),
+                    StartTime = "9:00 AM",
+                    EndTime = "5:30 PM",
+                    Host = "Microsoft",
+                    Speaker = "Sujit",
+                    RegistrationUrl = "http://events.microsoft.com/3224"
+                });
+                db.Events.Add(new Models.EventInfo
+                {
+                    Title = "Sample Event 2",
+                    StartDate = DateTime.Now.AddDays(1),
+                    EndDate = DateTime.Now.AddDays(4),
+                    StartTime = "9:00 AM",
+                    EndTime = "5:30 PM",
+                    Host = "Google",
+                    Speaker = "Nitish",
+                    RegistrationUrl = "http://events.microsoft.com/3224"
+                });
+                db.Events.Add(new Models.EventInfo
+                {
+                    Title = "Sample Event 3",
+                    StartDate = DateTime.Now.AddDays(4),
+                    EndDate = DateTime.Now.AddDays(6),
+                    StartTime = "9:00 AM",
+                    EndTime = "5:30 PM",
+                    Host = "Amazon",
+                    Speaker = "Unaish",
+                    RegistrationUrl = "http://events.microsoft.com/3224"
+                });
+                db.SaveChanges();
+            }
         }
     }
 }
